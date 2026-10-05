@@ -2,11 +2,10 @@
 
 void printInfo()
 {
-    std::cout << "Server started." << std::endl;
+    std::cout << "Client started." << std::endl;
 }
-
 int main()
 {
     printInfo();
     return 0;
-} 
+}   

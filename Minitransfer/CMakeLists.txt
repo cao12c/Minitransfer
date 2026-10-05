@@ -5,6 +5,7 @@
 # 将源代码添加到此项目的可执行文件。
 add_executable (Minitransfer "Minitransfer.cpp" "Minitransfer.h")
 add_executable (Server "Server.cpp")
+add_executable (Client "Client.cpp")
 
 
 
