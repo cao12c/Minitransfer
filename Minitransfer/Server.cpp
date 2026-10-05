@@ -8,8 +8,8 @@ void printInfo(const char* info)
 int main()
 {
     WSADATA wsaData;
-    WSAStartup(MAKEWORD(2, 2), &wsaData);
-    if (wsadata!=0)
+    int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+    if (result != 0)
     {
         printInfo("winsock starup failed");
     }
@@ -17,6 +17,18 @@ int main()
     {
         printInfo("Winsock initialized");
     }
+    SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (serverSocket == INVALID_SOCKET)
+    {
+        printInfo("socket creation failed");
+        WSACleanup();
+        return 1;
+    }
+    else
+    {
+        printInfo("socket created successfully");
+    }
+    closesocket(serverSocket);
     WSACleanup();
     return 0;
 } 
