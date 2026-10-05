@@ -11,7 +11,9 @@ add_executable (Client "Client.cpp")
 
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET Minitransfer PROPERTY CXX_STANDARD 20)
+  set_property(TARGET Minitransfer PROPERTY CXX_STANDARD 17)
+  set_property(TARGET Server PROPERTY CXX_STANDARD 17)
+  set_property(TARGET Client PROPERTY CXX_STANDARD 17)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
