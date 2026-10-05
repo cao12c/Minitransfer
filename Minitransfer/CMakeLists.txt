@@ -7,8 +7,7 @@ add_executable (Minitransfer "Minitransfer.cpp" "Minitransfer.h")
 add_executable (Server "Server.cpp")
 add_executable (Client "Client.cpp")
 
-
-
+target_link_libraries(Server ws2_32)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Minitransfer PROPERTY CXX_STANDARD 17)

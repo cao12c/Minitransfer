@@ -1,12 +1,22 @@
 #include <iostream>
-
-void printInfo()
+#include <winsock2.h>
+void printInfo(const char* info)
 {
-    std::cout << "Server started." << std::endl;
+    std::cout << info << std::endl;
 }
 
 int main()
 {
-    printInfo();
+    WSADATA wsaData;
+    WSAStartup(MAKEWORD(2, 2), &wsaData);
+    if (wsadata!=0)
+    {
+        printInfo("winsock starup failed");
+    }
+    else
+    {
+        printInfo("Winsock initialized");
+    }
+    WSACleanup();
     return 0;
 } 
