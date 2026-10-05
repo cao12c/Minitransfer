@@ -4,6 +4,10 @@
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (Minitransfer "Minitransfer.cpp" "Minitransfer.h")
+add_executable (Server "Server.cpp")
+
+
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Minitransfer PROPERTY CXX_STANDARD 20)

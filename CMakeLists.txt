@@ -12,4 +12,4 @@ endif()
 project ("Minitransfer")
 
 # 包含子项目。
-add_subdirectory ("Minitransfer")
+add_subdirectory (MiniTransfer "Minitransfer")
